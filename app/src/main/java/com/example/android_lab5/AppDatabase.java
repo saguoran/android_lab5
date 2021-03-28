@@ -31,7 +31,7 @@ public abstract class AppDatabase extends RoomDatabase {
                 if (INSTANCE == null) {
                     // Create database here.
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            AppDatabase.class, "lab4_database")
+                            AppDatabase.class, "lab5_database")
                             // Wipes and rebuilds instead of migrating if no Migration object.
                             // Migration is not part of this practical.
                             .fallbackToDestructiveMigration()

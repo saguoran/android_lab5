@@ -7,23 +7,32 @@ import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
+import com.google.android.gms.maps.model.LatLng;
+import java.io.Serializable;
+
 @Entity(tableName = "restaurant",foreignKeys = {@ForeignKey(entity = Cuisine.class,
         parentColumns = "id",
         childColumns = "cuisineId",
         onDelete = ForeignKey.CASCADE)
 } )
-public class Restaurant {
+
+@SuppressWarnings("serial")
+public class Restaurant implements Serializable {
     @PrimaryKey
     @NonNull
     String name;
     @ColumnInfo(index = true)
     int cuisineId;
     String address;
+    double latitude;
+    double longitude;
 
-    public Restaurant(@NonNull String name, int cuisineId, String address){
+    public Restaurant(@NonNull String name, int cuisineId, String address, double latitude, double longitude){
         this.name = name;
         this.cuisineId = cuisineId;
         this.address =address;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     @Override

@@ -16,7 +16,7 @@ import java.util.List;
 
 public class RestaurantsActivity extends AppCompatActivity {
     private static final String TAG = "RestaurantsActivity";
-    private static final String RESTAURANT_ADDRESS = "RESTAURANT_ADDRESS";
+     private static final String RESTAURANT ="RESTAURANT";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +40,10 @@ public class RestaurantsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Restaurant restaurant =((Restaurant)parent.getItemAtPosition(position));
                 Log.d(TAG, "onItemClick: "+ restaurant);
-//                Intent intent = new Intent(*.this, *.class);
-//                intent.putExtra(RESTAURANT_ADDRESS, restaurant.address);
-//                startActivity(intent);
+
+                Intent intent = new Intent(RestaurantsActivity.this, MapsActivity.class);
+                intent.putExtra(RESTAURANT, restaurant);
+                startActivity(intent);
             }
         });
     }
