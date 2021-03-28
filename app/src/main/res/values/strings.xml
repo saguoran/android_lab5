@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">android_lab5</string>
+    <string name="cuisines">Cuisines</string>
+    <string name="restaurants">Restaurants</string>
+</resources>
