@@ -36,7 +36,7 @@ public class AppRepository {
                 List<Cuisine> c= appDao.getAll();
                 if(c.isEmpty()){
                     appDao.insertAll(new Cuisine( 1,"Caprese Salad with Pesto Sauce"));
-                    appDao.insertAll(new Restaurant("Scaddabush Italian Kitchen & Bar Scarborough", 1,"580 Progress Ave, Scarborough, ON M1P 2K2", 3.77764859115719, -79.25379223486107));
+                    appDao.insertAll(new Restaurant("Scaddabush Italian Kitchen & Bar Scarborough", 1,"580 Progress Ave, Scarborough, ON M1P 2K2", 43.77765042790276, -79.25401184964606));
                     appDao.insertAll(new Restaurant("Nova Ristorante", 1,"2272 Lawrence Ave E #2, Scarborough, ON M1P 2P9", 43.749630782386184, -79.27758633061958));
                     // japanese
                     appDao.insertAll(new Cuisine( 2,"Sushi(壽司)"));
