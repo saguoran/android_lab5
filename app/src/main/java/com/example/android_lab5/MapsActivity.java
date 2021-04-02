@@ -4,6 +4,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -48,5 +49,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // display title info
         marker.showInfoWindow();
 
+        // set default map type to normal
+        mMap.setMapType(mMap.MAP_TYPE_NORMAL);
+     }
+
+    // switch map type
+    public void ChangeMapType (View view){
+
+        if(mMap.getMapType() == mMap.MAP_TYPE_NORMAL)
+            mMap.setMapType(mMap.MAP_TYPE_SATELLITE);
+        else
+            mMap.setMapType(mMap.MAP_TYPE_NORMAL);
     }
 }
